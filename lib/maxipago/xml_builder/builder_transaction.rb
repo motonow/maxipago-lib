@@ -114,6 +114,14 @@ module Maxipago
                   }
                 end
               }
+              unless self.options[:customer_id].nil?
+                xml.saveOnFile {
+                  xml.customerToken self.options[:customer_id]
+                  xml.onFileEndDate self.options[:onfile_end_date] unless self.options[:onfile_end_date].nil?
+                  xml.onFileComment self.options[:onfile_comment] unless self.options[:onfile_comment].nil?
+                  xml.onFileMaxChargeAmount self.options[:onFile_max_charge_amount] unless self.options[:onFile_max_charge_amount].nil?
+                }
+              end
             }
           }
         }
