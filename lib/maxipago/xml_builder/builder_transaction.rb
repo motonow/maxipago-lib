@@ -96,13 +96,21 @@ module Maxipago
               end
               xml.transactionDetail {
                 xml.payType {
-                  xml.creditCard {
-                    xml.number self.options[:number]
-                    xml.expMonth self.options[:exp_month]
-                    xml.expYear self.options[:exp_year]
-                    xml.cvvNumber self.options[:cvv_number] unless self.options[:cvv_number].nil?
-                    xml.eCommInd "eci"
-                  }
+                  unless self.options[:number].nil?
+                    xml.creditCard {
+                      xml.number self.options[:number]
+                      xml.expMonth self.options[:exp_month]
+                      xml.expYear self.options[:exp_year]
+                      xml.cvvNumber self.options[:cvv_number] unless self.options[:cvv_number].nil?
+                      xml.eCommInd "eci"
+                    }
+                  end
+                  unless self.options[:token].nil?
+                    xml.onFile {
+                      xml.token self.options[:token]
+                      xml.customerId self.options[:customer_id]
+                    }
+                  end
                 }
               }
               xml.payment {
@@ -114,9 +122,9 @@ module Maxipago
                   }
                 end
               }
-              unless self.options[:customer_id].nil?
+              unless self.options[:customer_token].nil?
                 xml.saveOnFile {
-                  xml.customerToken self.options[:customer_id]
+                  xml.customerToken self.options[:customer_token]
                   xml.onFileEndDate self.options[:onfile_end_date] unless self.options[:onfile_end_date].nil?
                   xml.onFileComment self.options[:onfile_comment] unless self.options[:onfile_comment].nil?
                   xml.onFileMaxChargeAmount self.options[:onFile_max_charge_amount] unless self.options[:onFile_max_charge_amount].nil?
