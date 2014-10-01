@@ -1,4 +1,4 @@
-{<img src="https://travis-ci.org/brunosoab/maxipago.png?branch=1.0.0.rc1" alt="Build Status" />}[https://travis-ci.org/brunosoab/maxipago]
+{<img src="https://travis-ci.org/motonow/maxipago-lib.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/motonow/maxipago-lib]
 
 == Adicionar a GEM na sua aplicação Rails 3 ou Rails 4
 
