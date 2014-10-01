@@ -17,3 +17,6 @@ source "http://rubygems.org"
 # Specify your gem's dependencies in maxipago.gemspec
 gemspec
 
+group :test do
+  gem 'codeclimate-test-reporter', '~> 0.4.1'
+end

@@ -9,6 +9,10 @@ branches:
     - master
     - 1.0.0.rc1
 
+addons:
+  code_climate:
+    repo_token: 88bff0ece428b1a8027cbf9b03512de380ed6850ca418c85006ac813b5260ddc
+
 script: bundle exec rspec spec
 
 notifications:

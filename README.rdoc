@@ -1,5 +1,6 @@
 {<img src="https://travis-ci.org/motonow/maxipago-lib.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/motonow/maxipago-lib]
-{<img src="https://codeclimate.com/github/motonow/Ruby-Integration-lib-v2/badges/gpa.svg" />}[https://codeclimate.com/github/motonow/Ruby-Integration-lib-v2]
+{<img src="https://codeclimate.com/github/motonow/maxipago-lib/badges/gpa.svg" />}[https://codeclimate.com/github/motonow/maxipago-lib]
+{<img src="https://codeclimate.com/github/motonow/maxipago-lib/badges/coverage.svg" />}[https://codeclimate.com/github/motonow/maxipago-lib]
 
 == Adicionar a GEM na sua aplicação Rails 3 ou Rails 4
 
